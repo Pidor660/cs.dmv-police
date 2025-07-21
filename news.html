@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMV Police News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>DMV</h1>
+    </div>
+    <div class="yellow-stripe"></div>
+    <div class="police-text">POLICE</div>
+    <div class="white-stripe"></div>
+    
+    <div class="nav">
+        <a href="index.html#about">ABOUT US</a>
+        <a href="join.html">JOIN</a>
+        <a href="news.html">NEWS</a>
+    </div>
+    
+    <div class="news-container">
+        <h2>LATEST NEWS</h2>
+        
+        <div class="news-item">
+            <h3>New Highway Patrol Initiative</h3>
+            <p class="date">July 15, 2025</p>
+            <p>DMV Police launches new highway safety campaign focusing on speeding violations in Concord area...</p>
+        </div>
+        
+        <div class="news-item">
+            <h3>Annual Officer Training</h3>
+            <p class="date">June 28, 2025</p>
+            <p>All DMV Police officers completed advanced road safety training at New Trooper Dr. headquarters...</p>
+        </div>
+        
+        <div class="news-item">
+            <h3>New Patrol Vehicles</h3>
+            <p class="date">May 10, 2025</p>
+            <p>Department unveiled 10 new high-speed patrol vehicles equipped with latest safety technology...</p>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2025 DMV Police</p>
+    </div>
+    <!-- Добавить перед закрывающим тегом body -->
+<script>
+    if(localStorage.getItem('authenticated')) {
+        const addBtn = document.createElement('a');
+        addBtn.href = "add-news.html";
+        addBtn.className = "admin-btn";
+        addBtn.textContent = "+ ADD NEWS";
+        document.body.appendChild(addBtn);
+    }
+
+    if(localStorage.getItem('authenticated')) {
+    const logoutBtn = document.createElement('button');
+    logoutBtn.textContent = "LOGOUT";
+    logoutBtn.onclick = () => {
+        localStorage.removeItem('authenticated');
+        location.reload();
+    };
+}
+    document.body.appendChild(logoutBtn);
+</script>
+
+</body>
+</html>

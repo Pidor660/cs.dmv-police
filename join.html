@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join DMV Police</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>DMV</h1>
+    </div>
+    <div class="yellow-stripe"></div>
+    <div class="police-text">POLICE</div>
+    <div class="white-stripe"></div>
+    
+    <div class="nav">
+        <a href="index.html#about">ABOUT US</a>
+        <a href="join.html">JOIN</a>
+        <a href="news.html">NEWS</a>
+    </div>
+    
+    <div class="form-container">
+        <h2>DMV POLICE APPLICATION</h2>
+        <form action="mailto:timshir120511@gmail.com" method="post" enctype="text/plain">
+            <!-- Основная информация -->
+            <div class="form-group">
+                <label>Your Roblox Username: <span class="required">*</span></label>
+                <input type="text" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label>How old are you? <span class="required">*</span></label>
+                <input type="number" name="age" min="13" required>
+            </div>
+            
+            <div class="form-group">
+                <label>How long have you been playing Bekarly Country Roblox? <span class="required">*</span></label>
+                <input type="text" name="playtime" required>
+            </div>
+            
+            <!-- Контактная информация -->
+            <div class="form-group">
+                <label>Telegram or Discord (@username) <span class="required">*</span></label>
+                <input type="text" name="contact" required>
+            </div>
+            
+            <!-- Опыт работы -->
+            <div class="form-group">
+                <label>How many arrests have you made? <span class="required">*</span></label>
+                <input type="number" name="arrests" min="0" required>
+            </div>
+            
+            <!-- Ситуационные вопросы -->
+            <div class="form-group">
+                <label>You're conducting a traffic stop. Your report to the radio: <span class="required">*</span></label>
+                <textarea name="radio_report" rows="3" required></textarea>
+            </div>
+            
+            <div class="form-group">
+    <label for="airbase_response">You're on the chase, and the suspect has entered the airbase. However, the military is on duty there. Describe your actions:</label>
+    <textarea 
+        id="airbase_response" 
+        name="airbase_response" 
+        rows="4" 
+        required
+        placeholder="I would..."></textarea>
+</div>
+
+            <div class="form-group">
+                <label>What code do you use when starting a chase? <span class="required">*</span></label>
+                <select name="chase_code" required>
+                    <option value="" disabled selected>Select code</option>
+                    <option value="10-80">10-80 (Chase in progress)</option>
+                    <option value="10-33">10-33 (Emergency)</option>
+                    <option value="10-32">10-32 (Request backup)</option>
+                    <option value="other">Other code</option>
+                </select>
+            </div>
+            
+            <!-- Кнопка отправки -->
+            <div class="form-group">
+                <button type="submit" class="submit-btn">
+                    SUBMIT APPLICATION
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <p>&copy; 2025 DMV Police | Shan address: 1478 New Trooper Dr.</p>
+    </div>
+</body>
+</html>

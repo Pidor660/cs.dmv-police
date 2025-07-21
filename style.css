@@ -1,0 +1,432 @@
+/* Общие стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Шапка сайта */
+.header {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    color: #ffffff;
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.yellow-stripe {
+    background: repeating-linear-gradient(
+        to right,
+        #FFD700,
+        #FFD700 30px,
+        transparent 30px,
+        transparent 50px
+    );
+    height: 10px;
+    width: 100%;
+    background-size: 80px 100%;
+    margin: 5px 0;
+}
+
+.yellow-stripe {
+    /* предыдущие стили */
+    animation: roadLine 2s linear infinite;
+}
+
+@keyframes roadLine {
+    0% { background-position: 0 0; }
+    100% { background-position: -80px 0; }
+}
+
+.white-stripe {
+    background-color: #FFFFFF;
+    height: 2px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+/* Текст POLICE */
+.police-text {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav a:hover {
+    color: #FFD700;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFD700;
+    transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Основной контент */
+.content {
+    padding: 30px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h2 {
+    color: #FFD700;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.content p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Секция ABOUT US */
+#about {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #111111;
+    border-radius: 5px;
+    border-left: 3px solid #FFD700;
+}
+
+#about h3 {
+    color: #FFD700;
+    margin-top: 0;
+    text-transform: uppercase;
+}
+
+/* Подвал */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    background-color: #111;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav a {
+        margin: 5px 0;
+    }
+    
+    .content {
+        padding: 20px 15px;
+    }
+}
+
+/* Форма для JOIN */
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #111111;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+}
+
+.form-container h2 {
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: #FFF;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #FFD700;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+.submit-btn {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #FFC000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(255, 215, 0, 0.2);
+}
+
+/* News Section Styles */
+.news-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.news-container h2 {
+    color: #FFD700;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.news-container h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: #FFD700;
+    margin: 10px auto;
+}
+
+.news-item {
+    background-color: #111;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+    border-left: 4px solid #FFD700;
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateX(5px);
+}
+
+.news-item h3 {
+    color: #FFD700;
+    margin-top: 0;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.date {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 5px 0 15px;
+    display: block;
+    font-style: italic;
+}
+
+.news-item p {
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.news-item {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.news-item:nth-child(1) { animation-delay: 0.1s; }
+.news-item:nth-child(2) { animation-delay: 0.3s; }
+.news-item:nth-child(3) { animation-delay: 0.5s; }
+
+/* Стили для формы */
+.form-container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #111;
+    border-radius: 5px;
+    border-top: 3px solid #FFD700;
+}
+
+.form-container h2 {
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.required {
+    color: #FF0000;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background: #222;
+    border: 1px solid #333;
+    color: #FFF;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.radio-options label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.radio-options input[type="radio"] {
+    accent-color: #FFD700;
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%23FFD700'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 35px;
+}
+
+.submit-btn {
+    background: #FFD700;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #FFC000;
+}
+
+/* Стиль для текстового поля с ответом */
+#airbase_response {
+    width: 100%;
+    padding: 12px;
+    background-color: #222;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    margin-top: 8px;
+    resize: vertical;
+}
+
+#airbase_response:focus {
+    outline: none;
+    border-color: #FFD700;
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
